@@ -26,7 +26,7 @@ export class SignIn {
     return this.signInForm.get("email");
   }
     
-    enviar()
+  enviar()
     {
       if (this.signInForm.valid){
         console.log(this.signInForm.value)

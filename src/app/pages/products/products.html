@@ -1,1 +1,24 @@
-<p>products works!</p>
+<section>
+    <h1>Lista de Productos</h1>
+    <div class="container">
+        <div class="row">
+            @for (item of gallery; track item.id) {
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img [src]="item.imageUrl" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.title}}</h5>
+                            <p class="card-text">{{item.description}}</p>
+                            <a href="#" class="btn btn-primary">Más Info</a>
+                        </div>
+                    </div>
+                </div>
+            }
+            @empty  {
+                <p>No hay productos disponibles</p>
+            }
+
+        </div>
+
+    </div>
+</section>
