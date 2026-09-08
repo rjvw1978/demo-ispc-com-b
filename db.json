@@ -1,0 +1,34 @@
+{
+  "gallery": [
+    {
+      "id": "1",
+      "title": "Atardecer en la montaña en Esquel",
+      "description": "Una vista panorámica con tonos cálidos.",
+      "imageUrl": "/imagenes/atardecer-montana.jpg",
+      "tags": [
+        "naturaleza",
+        "paisaje"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Ciudad nocturna",
+      "description": "Luces y movimiento en la gran ciudad.",
+      "imageUrl": "/imagenes/ciudad-noche.png",
+      "tags": [
+        "urbano",
+        "noche"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Atardecer en las sierras de Córdoba",
+      "description": "Una vista panorámica con tonos cálidos.",
+      "imageUrl": "/imagenes/atardecer-montana-cba.jpg",
+      "tags": [
+        "naturaleza",
+        "paisaje"
+      ]
+    }
+  ]
+}

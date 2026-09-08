@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product-service';
 
 @Component({
@@ -8,12 +8,21 @@ import { ProductService } from '../../services/product-service';
   styleUrl: './products.css',
 })
 export class Products {
-  gallery:any=[]
+  gallery:any[] = [];
 
-  constructor(private productService:ProductService){
+  constructor(private productService:ProductService, private cdr: ChangeDetectorRef){
 
-    this.gallery= this.productService.obtenerListaProductos();
+  this.productService.obtenerListaProductos().subscribe({
+    next: (data) => 
+      { console.log(data);
+        this.gallery = data;
+      },
+    error: (e) => console.error(e),
+    complete: () => 
+      { this.cdr.detectChanges();
+        console.info('complete');} 
+  });
+  }
     
   }
 
-}

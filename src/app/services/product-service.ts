@@ -1,37 +1,23 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
+export class ProductService  {
 
-  private gallery = [
+  private gallery:any;
+  private url:string="http://localhost:3000/gallery";
+
+  constructor(private  http: HttpClient)
   {
-    id: 1,
-    title: "Atardecer en la montaña en Esquel",
-    description: "Una vista panorámica con tonos cálidos.",
-    imageUrl: "/imagenes/atardecer-montana.jpg",
-    tags: ["naturaleza", "paisaje"]
-  },
-  {
-    id: 2,
-    title: "Ciudad nocturna",
-    description: "Luces y movimiento en la gran ciudad.",
-    imageUrl: "/imagenes/ciudad-noche.png",
-    tags: ["urbano", "noche"]
-  },
-  {
-    id: 3,
-    title: "Playa tranquila",
-    description: "Arena blanca y mar cristalino.",
-    imageUrl: "/imagenes/playa.png",
-    tags: ["mar", "relax"]
+
   }
-];
 
-  obtenerListaProductos()
+  obtenerListaProductos():Observable<any>
   {
-    return this.gallery;
+    return this.http.get(this.url);
   }
 
 }
