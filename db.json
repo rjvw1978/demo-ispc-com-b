@@ -29,6 +29,30 @@
         "naturaleza",
         "paisaje"
       ]
+    },
+    {
+      "title": "Atardecer en las sierras de Cba",
+      "description": "Una vista panorámica con tonos cálidos.",
+      "imageUrl": "/images/atardecer-montana-cba.jpg",
+      "tags": [
+        "naturaleza",
+        "paisaje",
+        "cba"
+      ],
+      "id": "vLCUF623hmU"
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "iva",
+      "rol": "admin"
+    },
+    {
+      "id": "2",
+      "name": "jose",
+      "rol": "user"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
